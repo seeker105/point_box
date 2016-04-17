@@ -1,0 +1,9 @@
+<h1>Welcome to Point-Box Login Page</h1>
+
+<%= form_for(:session, url: login_path) do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :username, placeholder: "Username" %>
+  <%= f.text_field :password, placeholder: "Password" %>
+  <%= f.text_field :password_confirmation, placeholder: "Password Confirmation" %>
+  <%= f.submit "Login", url: '/login' %>
+<% end %>

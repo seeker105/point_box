@@ -1,18 +1,19 @@
 class Admin::UsersController < Admin::BaseController
 
   def new
-    byebug
+    # byebug
     @user = User.new
   end
 
-  # def create
-  #   @user = User.create( user_params )
-  #   redirect_to user_path(@user)
-  #
-  # end
+  def create
+    @user = User.create( user_params )
+    redirect_to admin_users_path
 
-  def show
+  end
 
+  def index
+    # byebug
+    @basic_users = User.where(role: 0)
   end
 
 

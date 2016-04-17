@@ -1,0 +1,8 @@
+<h1>Welcome to your Admin Page</h1>
+
+
+<%= @basic_users.each do |user| %>
+  <div>
+    <%= user[:name] %>
+  </div>
+<% end %>
