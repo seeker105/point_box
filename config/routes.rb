@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :users, only: [:new, :create, :index]
   end
 
+
   resources :users, only: [:index, :show]
 
   get '/login', to: 'sessions#new'
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'seesions#destroy'
   get '/users/:user_id/points', to: 'users#points'
 
-
+  root to: 'sessions#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
